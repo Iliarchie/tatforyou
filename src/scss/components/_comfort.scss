@@ -1,0 +1,66 @@
+.comfort {
+  padding: 100px 0 0 0;
+  .comfort__container {
+    .comfort__content {
+      .comfort__items {
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width: 768px) {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+        }
+
+        @media (max-width: 480px) {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 32px;
+        }
+
+        .comfort__item {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 12px;
+          width: 300px;
+          text-align: center;
+
+          margin: auto;
+
+          &:hover {
+            img {
+              transform: scale(1.03);
+            }
+          }
+
+          img {
+            width: 150px;
+            height: 150px;
+            margin: 0 0 28px 0;
+            transition: 0.2s ease;
+          }
+
+          .comfort__title {
+            color: #000;
+            text-align: center;
+            font-family: var(--montserratRegular);
+            font-size: 21px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 130%;
+          }
+
+          .comfort__subtitle {
+            color: #000;
+            font-family: var(--montserratRegular);
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 130%;
+          }
+        }
+      }
+    }
+  }
+}

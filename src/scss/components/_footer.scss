@@ -1,10 +1,217 @@
-// .footer {
-//   padding: 80px 0 120px 0;
-//   background-color: #e9def6;
-//   margin: 100px 0 0 0;
+.footer {
+  padding: 80px 0 120px 0;
+  background-color: #e9def6;
+  margin: 100px 0 0 0;
 
-//   .footer__container {
-//     .footer__content {
-//     }
-//   }
-// }
+  @media (max-width: 480px) {
+    padding: 60px 0 80px 0;
+    margin: 22px 0 0 0;
+  }
+
+  .footer__container {
+    @media (max-width: 768px) {
+      padding: 0 30px;
+    }
+
+    .footer__content {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      @media (max-width: 768px) {
+        // justify-content: space-between;
+        row-gap: 32px;
+        width: 630px;
+        margin: 0 auto;
+
+        display: grid;
+        grid-template-columns: 33% 33% 25%;
+        column-gap: 32px;
+
+        @media (max-width: 480px) {
+          width: 100%;
+          column-gap: 22px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        display: grid;
+        grid-template-columns: 200px 200px;
+        gap: 42px;
+      }
+
+      // FOOTER-LOGO
+      .footer__logo {
+        height: 216px;
+        @media (max-width: 480px) {
+          display: none;
+        }
+
+        .footer-logo__list {
+          padding: 78px 0 0 0;
+
+          @media (max-width: 768px) {
+            display: none;
+          }
+
+          .list__footer {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+
+            .link-footer__name {
+              color: #7e868e;
+              font-family: var(--montserratRegular);
+              font-size: 17px;
+              font-style: normal;
+              font-weight: 400;
+              transition: 0.2s ease;
+
+              &:hover {
+                color: #5d666e;
+              }
+            }
+          }
+        }
+      }
+
+      // FOOTER-LIST
+      .footer__list {
+        height: 216px;
+
+        .list__title {
+          color: var(--040011);
+          font-family: var(--montserratSemiBold);
+          font-size: 21px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 130%;
+          padding: 0 0 16px 0;
+        }
+
+        .list__footer {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          gap: 8px;
+
+          .footer-link__name {
+            color: var(--040011);
+            font-family: var(--montserratRegular);
+            font-size: 17px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 130%;
+            transition: 0.2s ease;
+
+            &:hover {
+              color: #525c64;
+            }
+          }
+        }
+      }
+
+      // FOOTER-CONTACT
+      .footer-contact__list {
+        height: 216px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .contact__title {
+          color: var(--040011);
+          font-family: var(--montserratSemiBold);
+          font-size: 21px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 130%;
+        }
+
+        .number__num {
+          color: rgba(0, 0, 0, 0.8);
+          font-family: var(--montserratSemiBold);
+          font-size: 17px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 130%;
+          padding: 0 0 3px 0;
+        }
+
+        .number__text {
+          color: var(--6E6873);
+          font-family: var(--montserratRegular);
+          font-size: 17px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 130%;
+          opacity: 0.6;
+        }
+
+        // FOOTER-SOCIALS
+        .contact__social {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+        }
+
+        // FOOTER-PAY
+        .contact__pay {
+          display: flex;
+          gap: 16px;
+          align-items: center;
+        }
+      }
+
+      // FOOTER-DOWNLOAD
+      .footer-list__download {
+        .download__text {
+          color: var(--040011);
+          font-family: var(--montserratSemiBold);
+          font-size: 21px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 130%;
+          padding: 0 0 16px 0;
+
+          @media (max-width: 768px) {
+            width: 200px;
+          }
+        }
+
+        .download__code {
+          display: flex;
+          gap: 16px;
+
+          .download__app {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+          }
+        }
+      }
+
+      .active__end {
+        display: none;
+
+        .list__footer {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          .link-footer__name {
+            color: #7e868e;
+            font-family: var(--montserratRegular);
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 130%;
+          }
+        }
+
+        @media (max-width: 768px) {
+          display: block;
+        }
+      }
+    }
+  }
+}

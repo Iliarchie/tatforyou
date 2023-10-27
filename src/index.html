@@ -3,8 +3,8 @@
   <!-- HEAD-LINKS -->
   @include('partials/head.html')
 
-  <body class="page__body">
-    <div class="site-container">
+  <body>
+    <main class="site-container">
       <!-- HEADER -->
       @include('partials/header.html')
       <main class="main">
@@ -25,9 +25,18 @@
 
         <!-- PRICE-RECOMMEND -->
         @include('partials/recommend.html')
+
+        <!-- PRICE-ABOUT -->
+        @include('partials/about.html')
+
+        <!-- PRICE-COMFORT -->
+        @include('partials/comfort.html')
+
+        <!-- PRICE-FORM -->
+        @include('partials/form.html')
       </main>
       <!-- FOOTER -->
       @include('partials/footer.html')
-    </div>
+    </main>
   </body>
 </html>

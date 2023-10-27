@@ -58,7 +58,8 @@
 
         .search__input {
           position: relative;
-          width: 63vw;
+          width: 68%;
+          margin: 0 32px;
           border-bottom: 1px solid var(--D4BDED);
 
           @media (max-width: 768px) {
